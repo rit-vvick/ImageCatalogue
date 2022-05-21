@@ -81,7 +81,7 @@ document.addEventListener('keydown', event => {
 })
 
 imageLabel.addEventListener('change', event => {
-    rowElements[selectedIndex].innerText = event.target.value;
+    rowElements[selectedIndex].querySelector('.row-title').innerText = event.target.value;
 })
 
 handleStateChange(0);

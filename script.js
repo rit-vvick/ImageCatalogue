@@ -22,6 +22,8 @@ var rowElementJSON = [
 ];
 
 var selectedIndex = 0;
+const UP_KEY = 38;
+const DOWN_KEY = 40;
 
 const rowContainer = document.querySelector('.row-container');
 
@@ -69,11 +71,11 @@ rowElements.forEach(element => rowContainer.appendChild(element));
 
 document.addEventListener('keydown', event => {
     switch (event.keyCode) {
-        case 38:
+        case UP_KEY:
             console.log("Up key is pressed");
             handleStateChange((selectedIndex+4)%5);
             break;
-        case 40:
+        case DOWN_KEY:
             console.log("Down key is pressed");
             handleStateChange((selectedIndex+1)%5);
             break;
